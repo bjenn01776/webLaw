@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    body {
+        background-image:url('Images/resolving.jpg') ;
+    }
+    label {
+        display: block;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin: 0 1em;
+    }
+    .formFactor {
+        width: 460px;
+        border: 8px black solid;
+        background-color: gray;
+        margin: 10em auto 0 auto;
+        border-radius: 16px;
+    }
+    
+    input,textarea  {
+        width: 85%;
+        padding: .4em .4em  .4em .4em ;
+        margin: .6em .8em  .6em .8em ;
+        font-size: 1.8em;
+    }
+    button {
+        display:block;
+        height: 2.2em;
+        width: 7em;
+        background-color: burlywood;
+        margin: 1em 1.2em 1em 1em;
+        border-radius: 6px;;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <!-- form action="results.html" class="formFactor" -->  
+    <form onsubmit="sendMsg(); reset(); return false" class="formFactor"  method="POST" >  
+
+        <div style="margin-top: 1.2em";></div>
+
+        <div>
+        <label for="name"> Name: </label>
+        <input type="text" name="name" id="name" required>
+        </div>
+
+        <div>      
+        <label for="phone" >Phone: </label>
+        <input type="tel" name="phone" id="phone"> 
+        </div>
+
+        <div>
+        <label for="mail"> Email: </label>
+        <input type="email"  name="mail" id="mail">
+        </div>
+        
+        <h2> message</h2>
+        <textarea cols="48" rows="6"></textarea>
+
+        <button type="submit"> SUBMIT</button>
+    </form>
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script>
+        function sendMsg()
+        {
+          Email.send(  
+            {
+                Host: "smtp.gmail.com",
+                Username: "ejpien1@gmail.com",
+                Password: "Munjoy_1",
+                To:    "ejpien1@gmail.com",
+                From : document.getElementById("mail").value,
+                Subject: "this a a bjenn test",
+                Body:    "bjenn body of msg"
+            }
+          ).then ( message => alert("alert msg  from bJenn")  ) ; 
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
