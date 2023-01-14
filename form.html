@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <style> 
-    body {
-        background-image:url('Images/resolving.jpg') ;
-    }
-    label {
+        body {
+            background-image:url('Images/resolving.jpg') ;
+        }
+
+    label,h2 {
         display: block;
         font-size: 1.8em;
         font-weight: 700;
         margin: 0 1em;
     }
+
     .formFactor {
         width: 460px;
         border: 8px black solid;
         background-color: gray;
-        margin: 10em auto 0 auto;
+        margin: 5em auto 0 auto;
         border-radius: 16px;
     }
     
@@ -63,13 +66,15 @@
         <input type="email"  name="mail" id="mail">
         </div>
         
-        <h2> message</h2>
+        <h2> Message:</h2>
         <textarea cols="48" rows="6"></textarea>
 
         <button type="submit"> SUBMIT</button>
     </form>
+
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
-    <script>
+   
+   <script>
         function sendMsg()
         {
           Email.send(  
@@ -85,8 +90,6 @@
           ).then ( message => alert("alert msg  from bJenn")  ) ; 
 
         }
-
-
     </script>
     
 </body>
