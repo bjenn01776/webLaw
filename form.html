@@ -46,8 +46,8 @@
 </head>
 <body>
 
-    <!-- form action="results.html" class="formFactor" -->  
-    <form onsubmit="sendMsg(); reset(); return false" class="formFactor"  method="POST" >  
+    <form action="results.html" class="formFactor" >  
+    <!-- form onsubmit="sendMsg(); reset(); return false" class="formFactor"  method="POST" -->  
 
         <div style="margin-top: 1.2em";></div>
 
@@ -69,7 +69,7 @@
         <h2> Message:</h2>
         <textarea cols="48" rows="6"></textarea>
 
-        <button type="submit"> SUBMIT</button>
+        <button type="submit"> SUBMIT action="dispStuff()"</button>
     </form>
 
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
@@ -89,6 +89,13 @@
             }
           ).then ( message => alert("alert msg  from bJenn")  ) ; 
 
+        }
+    </script>
+    <script>   
+        function dispStuff()
+        {
+            var name = getElementById("name");
+            console.log( name);
         }
     </script>
     
