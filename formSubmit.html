@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        body {
+            background-image:url('Images/resolving.jpg') ;
+        }
+
+    label,h2 {
+        display: block;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin: 0 1em;
+    }
+
+    .formFactor {
+        width: 460px;
+        border: 8px black solid;
+        background-color: gray;
+        margin: 5em auto 0 auto;
+        border-radius: 16px;
+    }
+    
+    input,textarea  {
+        width: 85%;
+        padding: .4em .4em  .4em .4em ;
+        margin: .6em .8em  .6em .8em ;
+        font-size: 1.8em;
+    }
+    button {
+        display:block;
+        height: 2.2em;
+        width: 7em;
+        background-color: burlywood;
+        margin: 1em 1.2em 1em 1em;
+        border-radius: 6px;;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <h1> Form 4</h1>
+     
+    <form action="https://formsubmit.com/bjenn1776@verizon.net"" class="formFactor"  method="Post" >  
+
+        <div style="margin-top: 1.2em";></div>
+
+        <div>
+        <label for="name"> Name: </label>
+        <input type="text" name="name" id="name" required>
+        </div>
+
+        <div>      
+        <label for="phone" >Phone: </label>
+        <input type="tel" name="phone" id="phone"> 
+        </div>
+
+        <div>
+        <label for="mail"> Email: </label>
+        <input type="email"  name="mail" id="mail">
+        </div>
+        
+        <h2> Message:</h2>
+        <textarea cols="48" rows="6" id="myMsg"></textarea>
+
+        <button type="submit"> mySubmit</button> 
+    </form>
+
+   
+   
+    
+    <script>   
+        function dispStuff()
+        {
+            var name = document.getElementById("name").name;
+            var msg  = document.getElementById("myMsg").value;
+            console.log( name + msg);
+        }
+
+        alert(name );
+    </script>
+    
+</body>
+</html>
