@@ -48,7 +48,7 @@
 </head>
 <body>
 
-    <form id="myForm" action="#" class="formFactor" >  
+    <form id="myForm" action="#" class="formFactor"   method="post">  
     <!-- form onsubmit="sendMsg(); reset(); return false" class="formFactor"  method="POST" -->  
 
         <div style="margin-top: 1.2em";></div>
@@ -71,21 +71,46 @@
         <h2> Message:</h2>
         <textarea cols="48" rows="6" id="msg"></textarea>
 
-        <button type="submit"   > SUBMIT </button>
+        <button type="submit" onClick="sendEmail()"> SUBMIT </button>
     </form>
+
+
+    <script>  
+    function sendEmail()
+    {
+        console.log("Begin sendEmail(): Sending msg  to epien1");
+        var form = document.getElementById("myForm");
+        console.log("in SendMsg()")
+        e.preventDefault();
+
+        Email.send(
+            {
+                Host:     "smtp.gmail.com",
+                Username: "bjenn1776@verizon.net",
+                Password: "Munjoy_1",
+                To:       "ejpien1@gmail.com",
+                From :    "ejpien1@gmail.com",
+                Subject:  "this a a bjenn test",
+                Body:     "bjenn body of msg"
+            }
+            ).then ( message => alert("SendEmail(): to ejpien1 thru elactic server") ) ; 
+    } 
+    //Password: "56C19F282FAF17CA4072422D4B8D46F7D303",
+    </script>
+
 
    <script>  
     alert("Sending msg  to epien1");
    var form = document.getElementById("myForm");
    console.log("in script()")
-
+/*
    form.addEventListener('submit',(e)=>
         {
         console.log("in SendMsg()")
         e.preventDefault();
         Email.send(  
             {
-                Host:     "smtp.elasticemail.com",
+                Host:     "smtp.gmail.com",
                 Username: "ejpien1@gmail.com",
                 Password: "56C19F282FAF17CA4072422D4B8D46F7D303",
                 To:       "ejpien1@gmail.com",
@@ -95,6 +120,7 @@
             }
           ).then ( message => alert("Sending msg  to bjenn1776")  ) ; 
         } )
+        */
     </script>
 
     
