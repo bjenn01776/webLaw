@@ -8,9 +8,15 @@
     <title>Document</title>
 
     <style> 
-        body {
+    body {
             background-image:url('Images/resolving.jpg') ;
-        }
+    }
+
+    .container {
+        width: 65%;
+        background-color: aliceblue;
+        outline: blue 2px solid;
+    }
 
     label,h2 {
         display: block;
@@ -36,7 +42,7 @@
     button {
         display:block;
         height: 2.2em;
-        width: 7em;
+        width: 65%;
         background-color: burlywood;
         margin: 1em 1.2em 1em 1em;
         border-radius: 6px;;
@@ -46,9 +52,10 @@
 </head>
 <body>
 
-    <h1> Form 4</h1>
+    <h1> formSubmit.com</h1>
      
-    <form action="https://formsubmit.com/bjenn1776@verizon.net"" class="formFactor"  method="Post" >  
+    <form action="https://formsubmit.com/eejpien1@gmail.com" class="formFactor"  method="Post">
+        
 
         <div style="margin-top: 1.2em";></div>
 
@@ -70,22 +77,26 @@
         <h2> Message:</h2>
         <textarea cols="48" rows="6" id="myMsg"></textarea>
 
-        <button type="submit"> mySubmit</button> 
+        <button type="submit" id="btn"  > mySubmit</button> 
     </form>
 
    
    
-    
+  <!--   
     <script>   
         function dispStuff()
         {
             var name = document.getElementById("name").name;
             var msg  = document.getElementById("myMsg").value;
+            var btn  = document.getElementById("btn").value;
             console.log( name + msg);
-        }
 
-        alert(name );
+          //  btn.addEventListener('submit', disp(){ console.log("hello billy") } );
+            
+            alert(name );
+        }
     </script>
+     -->  
     
 </body>
 </html>
