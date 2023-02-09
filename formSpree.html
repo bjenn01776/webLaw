@@ -8,6 +8,12 @@
     <title>Document</title>
 
     <style> 
+
+    
+*, *::after,*::before{ padding: 0; margin: 0; box-sizing: border-box}
+
+    
+
     body {
             background-image:url('Images/resolving.jpg') ;
     }
@@ -18,66 +24,75 @@
         outline: blue 2px solid;
     }
 
-    label,h2 {
-        display: block;
-        font-size: 1.8em;
-        font-weight: 700;
-        margin: 0 1em;
-    }
-
     .formFactor {
         width: 460px;
         border: 8px black solid;
         background-color: gray;
-        margin: 5em auto 0 auto;
+        margin: 2em auto 0 auto;
         border-radius: 16px;
     }
-    
-    input,textarea  {
-        width: 85%;
-        padding: .4em .4em  .4em .4em ;
-        margin: .6em .8em  .6em .8em ;
+
+    .formDiv { width:85%;}
+
+    label,h2 {
+        display: block;
         font-size: 1.8em;
+        font-weight: 700;
+        margin:   1em  1em 0 1em;
     }
-    button {
-        display:block;
-        height: 2.2em;
-        width: 65%;
-        background-color: burlywood;
-        margin: 1em 1.2em 1em 1em;
-        border-radius: 6px;;
+
+input,textarea  {
+    display: block;
+    width: 85%;
+    margin:  .2em  auto  ;
+    padding: .4em .4em  .4em .4em ;
+    font-size: 1.8em;
+    border-radius: 6px ;
+    }
+
+button {
+    display:block;
+    width: 85%;
+    margin: 1em auto;
+    height: 2.8em;
+    font-size: 1.8em;
+    font-weight: 700;
+    background-color: burlywood;
+    border-radius: 6px;
+    }
+
+button[type='submit']:hover {
+        background-color: aquamarine;
     }
     
     </style>
 </head>
 <body>
 
-    <h1> formSubmit.com</h1>
+    <h!--  formSubmit.com</h1  -->
      
-    <form action="https://formspree.io/f/ejpien1@gmail.com" class="formFactor"  method="post">
+    <form  action="https://formspree.io/f/xjvdyvla" class="formFactor"  method="post">
         
 
         <div style="margin-top: 1.2em";></div>
 
-        <div>
+        
         <label for="name"> Name: </label>
         <input type="text" name="name" id="name" required>
-        </div>
+        
 
-        <div>      
+           
         <label for="phone" >Phone: </label>
         <input type="tel" name="phone" id="phone"> 
-        </div>
-
-        <div>
+        
+     
         <label for="mail"> Email: </label>
         <input type="email"  name="mail" id="mail">
-        </div>
         
         <h2> Message:</h2>
-        <textarea cols="48" rows="6" id="myMsg"></textarea>
+        <textarea cols="48" rows="6" name="msg" id="myMsg"></textarea>
 
-        <button type="submit" id="btn"  > mySubmit</button> 
+        <button type="submit" id="btn"  >SUBMIT</button> 
     </form>
 
    
