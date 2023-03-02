@@ -1,0 +1,110 @@
+
+
+*, *::after, *::before { 
+	padding: 0; margin: 0; box-sizing: border-box;
+	}
+
+
+body {
+	background-color: black;
+	max-width: 950px;
+	margin: auto;
+	}
+
+
+/* header { background-color:coral; color:white; text-align:center;height:80px;} */
+header   { background-color:rgb(89, 99, 112); color:white; text-align:center;height:80px;}
+header  p{ text-align: center;}
+header h1{ text-align: center; padding-top:18px; font-size: 2.4em;}
+
+
+
+nav { background-color:black; color:white;
+	height:54px;
+	font-size: 22px;
+	text-align: right;
+	word-spacing:2em; padding-right:68; padding-top: 12px;}
+
+nav a { padding-top: 5px; color:yellow; text-decoration: none;}
+
+nav a:hover {
+	background-color: blue ;
+	}
+
+
+.showcase {
+	background-image: url('../Images/CourtHouse-612x612.jpg');
+	background-color: red;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	height: 420px;
+	display: block;
+	padding: 24px 64px;
+	}
+ 
+	
+.container {
+	display:  grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: black;
+	grid-column-gap: 1.8em;
+	width: 80%;
+	margin: 1.2em auto 0 auto;
+	/* background-image: url('Images/CourtHouse-612x612.jpg'); */
+	/* padding:  0px  24px; */
+	}
+ 
+
+.box { background-color: gray;
+	border-radius: 12px; 
+	margin: 0px;
+	}
+		
+.box h1,h2{ text-align:center;
+	padding-bottom: 12px;}
+
+.box p{ text-align:center;
+	padding: 0px  1.2em 1.2em 1.2em;}
+
+
+aside {
+	background-color: black;
+	color: 	white;
+	width:  16%;
+	height: 210px;
+	float: 	right;
+	padding: 22px 62px;
+	margin-top: 12px;
+	margin-left: 12px;
+	box-sizing: border-box;
+	}
+
+	
+aside  ul{ padding:0px; }
+aside  li{ list-style:none; }
+
+footer { 
+    /* : 16px   54px; */
+	margin-top: 1em;
+	background-color:rgb(89, 99, 112) ;
+	height: 10vh;
+	}
+
+footer h1,h2,h2 { padding: 1.0em 0 0 8em}
+
+
+@media(max-width: 600px ){ 
+
+	.container {
+		display:block;
+	}
+	.box {
+		margin-bottom: 1.6rem;
+	}
+	nav {
+		display:flex;
+	}
+	nav a { padding: 12px ;}
+ }
