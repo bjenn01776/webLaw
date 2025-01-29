@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="type/javascript">
+        function sendEmail(){
+            Email.send({
+                SecureToken: "2435265655454",
+                To:'bjenn1776@verizon.net',
+                From: 'epien1@gmail.com',
+                Subject: 'testing email from CSS',
+                Body: 'this is my email test bvogu form send info thru CSS' ,
+            }).then( message=>alert('bj did not work')
+            );
+        }
+    </script>
+
+    <style>
+        body {
+            min-height: 78vh;
+        }
+
+        header {
+            background-color: rgb(30, 153, 30);
+        }
+
+        fieldset {
+            width: max-content;
+            margin: 8vh 0 0 58vw;
+            padding: 1.2em 1.2em;
+            border-width: 4px;
+            border-radius: 16px;
+        }
+
+        legend {
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+        label {
+            font: 1.2em arial;
+            font-weight: bold;
+            padding-top: 1.8em;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: fit-content;
+            border-radius: 8px;
+            font: 1.2em arial;
+            margin-bottom: 1.0em;
+        }
+
+        button {
+            font: 1.4em arial;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            width: 6em;
+            border-radius: 8em;
+            height: 4vh;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Law Office of Will Jennings </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Service</li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <form action="https://api.web3forms.com/submit" method="post">
+
+        <fieldset>
+            <legend>CONTACT
+
+            </legend>
+
+            <label>Access Key</label>
+            <input type="hidden" name="access_key" value="3bd302c0-eb05-4a3e-aee1-ff2cd803dfc4">
+
+            <label>Name</label>
+            <input type="text" name="name" value="Gern Blandstein">
+
+
+            <label>Email</label>
+            <input type="email" name="email" value="ejpien1@gmail.com">
+
+            <label for="myMsg">Message</label>
+            <textarea name="myMsg" row=6 column=22 name="message">my message to will</textarea>
+
+            <label>Phone</label>
+            <input type="phone" name="phone placeholder=" 98-334-6594">
+
+            <button type="submit" name="submit"> PRESS </button>
+
+            <!-- <button type="submit" onclick="sendEmail()">SUBMIT</button> -->
+        </fieldset>
+    </form>
+
+
+
+</body>
+
+</html>
