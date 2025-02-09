@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 3px lime solid; */
+}
+
+.wrapper {
+    /*  border: 3px solid red; */
+    max-width: 960px;
+    min-width: none;
+    min-height: 85vh;
+    margin: auto;
+
+    background-image: url('../Images/lady-justice-justitia.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    /* border: solid 2px blue; */
+    background-color: BLACK;
+    color: white;
+    margin: auto;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+
+.logo {
+    height: 1.8em;
+    width:  1.8em;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 50%;
+    margin-left: 32px;
+    padding: auto 0;
+    float: left;
+    text-align: center;
+    border: 2px white solid;
+}
+
+#logo {
+    align-self: flex-start;
+    outline: 1px dashed red;
+}
+
+/*************************************/
+
+nav {
+    background-color: rgb(233, 126, 38);
+    display: block;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 12px;
+    margin-right: 28px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:hover {
+    background-color: antiquewhite;
+    color: gray;
+}
+
+nav a {
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+/*********************************/
+
+.services {
+    margin: 22vh 0 0 70%;
+}
+
+.services ul {
+    width: 100%;
+}
+
+.services li {
+    font-size: 2.6em;
+    margin-bottom: 18px;
+}
+/********************************/
+
+
+
+@media (min-width:680px) {
+
+   header h1,
+    header h2 {
+        background-color: black;
+        color: yellow;
+    }
+}
