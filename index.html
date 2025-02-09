@@ -5,47 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link   rel="stylesheet"  href="./styles.css">
+    <link rel="stylesheet" href="./Styles/header.css">
 
 
-   <!-- <style   type="text/javascript"  src="./styles.css"></style> -->
+    <script>
+        function myHeader() {
+            console.log('resizing');
+            /* var hdgs = document.querySelector('.h1'); */
+            var hdgs = document.getElementsByTagName('h1');
+            console.log(hdgs[0].textContent);
+            console.log(hdgs[1].textContent);
+            hdgs[0].textContent += " WillJado";
+            hdgs[1].textContent = "";
+        }
+
+        /* window.addEventListener('resize', myHeader); */
+
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">hi</div>
-         <h1>Law Office of Will Jennings </h1>
-    </header>
-    <nav>  
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>Service</li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="About.html">About</a></li>
-        </ul>
-    </nav>
+
+    <div class="wrapper">
+        <header>
+            <h1>Law Office of</h1>
+            <h1>Will Jennings</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./Pages/sevice.hyml">Service</a></li>
+                <li><a href="./Pages/contact.html">Contact</a></li>
+                <li><a href="./Pages/about.html">About</a></li>
+            </ul>
+        </nav>
 
 
-    <div class="panel">
-   <!--  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam reiciendis iusto, tenetur inventore
+        <!-- <div class="panel">
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam reiciendis iusto, tenetur inventore
         consequatur quam tempore quod voluptas quasi, sequi culpa fugit. Iste totam magni cumque sint modi repudiandae
         distinctio unde aspernatur fugiat numquam eaque, facilis, eius a voluptatibus quam, architecto temporibus
         aperiam tempore! Voluptas debitis, doloribus molestiae minus eius ut eligendi cumque, odio culpa temporibus sit
         eaque. Sequi quis magni quaerat sapiente, placeat nobis molestiae nostrum perspiciatis minus consequatur, iste
         animi laboriosam, aliquid ratione voluptate numquam doloribus fugit harum? Architecto at, quod cupiditate, fuga
         ipsa ex recusandae dolorem cum tempora deserunt esse eaque repellendus beatae! Hic eaque accusantium voluptas?
-        -->
-    </p>
-</div>
+        </p></div> -->
 
-<div class="services">    
-    <ul>
-        <li> Taxes</li>
-        <li> Wills</li>
-        <li> Trusts</li>
-        <li> Estates</li>
-    </ul>
-</div>
+        <div class="services">
+            <ul>
+                <li> Taxes</li>
+                <li> Wills</li>
+                <li> Trusts</li>
+                <li> Estates</li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
