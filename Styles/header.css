@@ -31,7 +31,7 @@ header {
 
 .logo {
     height: 1.8em;
-    width:  1.8em;
+    width: 1.8em;
     background-color: blueviolet;
     color: white;
     border-radius: 50%;
@@ -78,25 +78,24 @@ nav a {
 
 /*********************************/
 
-.services {
-    margin: 22vh 0 0 70%;
+.footer h1 {
+    max-width: 960px;
+    min-width: none;
+    margin: auto;
+    min-height: 8vh;
 }
 
-.services ul {
-    width: 100%;
+.footer h1 {
+
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
-.services li {
-    font-size: 2.6em;
-    margin-bottom: 18px;
-}
 /********************************/
-
-
-
 @media (min-width:680px) {
 
-   header h1,
+    header h1,
     header h2 {
         background-color: black;
         color: yellow;
