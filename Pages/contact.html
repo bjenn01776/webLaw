@@ -9,18 +9,6 @@
     <link rel="stylesheet" href="../Styles/header.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    <script type="type/javascript">
-        function sendEmail(){
-            Email.send({
-                SecureToken: "2435265655454",
-                To:'bjenn1776@verizon.net',
-                From: 'epien1@gmail.com',
-                Subject: 'testing email from CSS',
-                Body: 'this is my email test bvogu form send info thru CSS' ,
-            }).then( message=>alert('bj did not work')
-            );
-        }
-    </script>
 
     <style>
 
@@ -89,21 +77,22 @@
 
                 </legend>
 
-                <label>Access Key</label>
-                <input type="hidden" name="access_key" value="3bd302c0-eb05-4a3e-aee1-ff2cd803dfc4">
+               
+                <!-- <label>Access Key</label> -->
+                <input type="hidden" name="access_key" value="3bd302c0-eb05-4a3e-aee1-ff2cd803dfc4"> 
+                <br>
 
                 <label>Name</label>
-                <input type="text" name="name" value="Gern Blandstein">
-
+                <input type="text"  name="name"  placeholder=" My Name" required>
 
                 <label>Email</label>
-                <input type="email" name="email" value="ejpien1@gmail.com">
-
-                <label for="myMsg">Message</label>
-                <textarea name="myMsg" row=6 column=22 name="message">my message to will</textarea>
+                <input type="email" name="email" placeholder=" ejpien1@gmail.com">
 
                 <label>Phone</label>
-                <input type="phone" name="phone placeholder=" 98-334-6594">
+                <input type="phone" name="phone" placeholder=" (xxx) xxx-xxxx">
+
+                <label for="myMsg">Message</label>
+                <textarea name="myMsg" row=6 column=22 name="message"> </textarea>
 
                 <button type="submit" name="submit"> SEND </button>
 
@@ -118,6 +107,20 @@
         <h1> Excelsior</h1>
     </div>
 
+    
+ <script type="type/javascript">
+        function sendEmail(){
+            Email.send({
+                SecureToken: "2435265655454",
+                To:'ejpien1@gmail.com',
+                From: 'bjenn1776@verizon.net',
+                Subject: 'Testing email for contact page',
+                Body: 'This is acontact form to send email using 'sendEmail' service' ,
+            }).then( message=>alert('bj did not work')
+            );
+        }
+        alert("I sent  email !!! to ejpien1")
+    </script>
 
 </body>
 
