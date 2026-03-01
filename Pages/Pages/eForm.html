@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../Styles/header.css">
+
+     
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            const PUBLIC_KEY = "0aJsrazqAuBf5_Khr";
+            emailjs.init({
+                publicKey: PUBLIC_KEY,
+            });
+        })(); 
+    </script>
+
+    <script>
+        window.onload = function () {
+
+            const frm = document.getElementById("myForm");
+            frm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                console.log("Send Email")
+
+                var formFields = {
+                    client: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    phone: document.getElementById("phone").value,
+                    message: document.getElementById("msg").value
+                };
+
+                const  SERVICE_ID = "service_jry1tch";
+                const TEMPLATE_ID = "template_f641er3";
+
+                emailjs.send(SERVICE_ID, TEMPLATE_ID, formFields).then(
+                    (response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                    },
+                    (error) => {
+                        console.log('FAILED...', error);
+                    }
+                );
+            })
+        }
+
+    </script>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            width: 35ch;
+            margin: auto;
+            background-color: rgb(227, 206, 90);
+        }
+
+        form {
+            background-color: rgb(195, 215, 195);
+            width: 38ch;
+            font-size: 1.6em;
+            margin: auto;
+            margin-top: 4em;
+            border-radius: 12px;
+        }
+
+        form label {
+            display: block;
+            font-size: inherit;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-transform: uppercase;
+            margin-top: 14px;
+            margin-left: 12px;
+        }
+
+        input,
+        button,
+        textarea {
+            font-size: inherit;
+            font-weight: inherit;
+            margin-left: 12px;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: rgb(7, 70, 7);
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Law Office of Will Jennings</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="./Pages/service.html"> Service</a></li>
+                <li><a href="./Pages/eForm.html"> Contact1</a></li>
+                <li><a href="./Pages/contact.html">Contact2</a></li>
+                <li><a href="./Pages/about.html"> About</a></li>
+            </ul>
+        </nav>
+  
+
+    <form id="myForm">
+        <label for="name"> Name </label>
+        <input type="text" id="name" name="name" required value="bill">
+
+        <label for="email"> Email </label>
+        <input type="text" id="email" name="email" required value="billj@hotmail.com">
+
+        <label for="email"> Phone </label>
+        <input type="tel" id="phone" name="phone" required value="(978)443-6594">
+
+        <label for="email"> Message </label>
+        <textarea id="msg" rows=7 cols=36 name="msg" required placeholder="state service required"></textarea>
+        <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+  </div>
+</body>
+
+</html>

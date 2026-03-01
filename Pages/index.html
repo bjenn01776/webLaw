@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      <link rel="stylesheet" href="./Styles/header.css">
+    <script type="text/javascript" src="./myJava.js">   </script>
+
+    <script>
+        function myHeader() {
+            console.log('resizing');
+            /* var hdgs = document.querySelector('.h1'); */
+            var hdgs = document.getElementsByTagName('h1');
+            console.log(hdgs[0].textContent);
+            console.log(hdgs[1].textContent);
+            hdgs[0].textContent += " WillJado";
+            hdgs[1].textContent = "";
+        }
+
+        /* window.addEventListener('resize', myHeader); */
+    </script>
+
+    <style>
+        .services {
+            margin: 18vh 0 0 72%;
+        }
+
+        .services ul {
+            width: 100%;
+        }
+
+        .services li {
+            font-size: 2.6em;
+            margin-bottom: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Law Office of Will Jennings</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="./Pages/service.html"> Service</a></li>
+                <li><a href="./Pages/eForm.html"> Contact1</a></li>
+                <li><a href="./Pages/contact.html">Contact2</a></li>
+                <li><a href="./Pages/about.html"> About</a></li>
+            </ul>
+        </nav>
+
+        <div class="services">
+            <ul>
+                <li> Taxes </li>
+                <li> Wills </li>
+                <li> Trusts </li>
+                <li> Estates </li>
+            </ul>
+        </div>
+ </div>
+        <div class="footer">
+         <h1>Excelsior</h1>
+        </div>
+
+</body>
+</html>
