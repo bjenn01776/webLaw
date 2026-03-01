@@ -2,28 +2,42 @@
 
 <head>
     <style>
-        body {
+        /* body {
             background-color: rgb(63, 9, 45);
-            /* background-image: url('Images/lady-justice-justitia.avif'); */
-        }
+            background-image: url('Images/lady-justice-justitia.avif');
+        } */
 
+
+        .wrapper2 {
+     
+    max-width: 960px;
+    min-width: 480px;
+    min-height: 85vh;
+    margin:     auto;
+  background-image: url('../Images/notaryAdvice-600w.webp');
+
+
+    /* background-image:  url('../Images/lady-justice-justitia.avif');*/
+    background-repeat: no-repeat;
+    background-size:   cover; 
+}
         .container {
             display: block;
-            width: 92%;
+            width: auto;
             background-color: gray;
             border-radius: 18px;
-            margin: 3em auto;
+            /* margin: 3em auto;
             padding-top: 2em;
-            padding-bottom: .8em;
+            padding-bottom: .8em; */
         }
 
         .box_img {
             min-height: 34vh;
-            flex-basis: 35%;
+            flex-basis: 50%;
             align-items: stretch;
-            color: white;
+            /* color: white;
             margin: 0 .6em 4vh .6em;
-            border: solid BLACK 3px;
+            border: solid BLACK 3px; */
             border-radius: 18px;
 
             background-color: rgb(140, 238, 177);
@@ -35,18 +49,31 @@
         }
 
         .box {
+            flex-basis: 50%;
             background-color: rgb(175, 185, 233);
-            flex-basis: 35%;
-            height: auto;
-            margin: 0 .6em 4vh .6em;
-            padding: 0 1.8em;
-            border-radius: 18px;
             color: white;
+            /* height: auto; */
+            margin-top: 3em;
+            margin-inline: auto;
+            padding-inline: 1.8em; 
+            border-radius: 18px;
+            max-width: 600px;
+            font-size: 1.4em;
+           
         }
 
         .box li {
             padding-left: .2em;
             margin: 0 0 0 3em;
+        }
+
+
+
+
+        .box h2 {
+            background-color: rgb(175, 185, 233);
+            color: white;
+            text-decoration: underline;
         }
 
         @media (min-width: 600px) {
@@ -56,8 +83,8 @@
                 align-items: flex-end;
                 justify-content: space-evenly;
                 align-items: stretch;
-                width: 92%;
-                max-width: 860px;
+                width: 100%;
+                /* max-width: 860px; */
                 background-color: gray;
                 /* border: solid green 8px; */
                 /* grid-template-columns: 1fr 1fr; */
@@ -76,48 +103,49 @@
 </head>
 
 <body>
+    <div class="wrapper2">
+        <header>
+            <h1> Law Office of Will Jennnings</h1>
+        </header>
 
-    <header>
-        <h1> Law Office of Will Jennnings</h1>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html"> Home</a></li>
+                <li><a href="service.html"> Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html"> About</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html"> Home</a></li>
-            <li><a href="service.html"> Service</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html"> About</a></li>
-        </ul>
-    </nav>
+        <div class="container">
 
-    <div class="container">
+            <!-- <div class="box_img">
 
-        <div class="box_img">
+                <!--- img src="Images\woman-meeting-notary-advice-600w-579889123.webp" width="220" alt="Add Picture"> -->
+            </div> -->
 
-            <!--- img src="Images\woman-meeting-notary-advice-600w-579889123.webp" width="220" alt="Add Picture"> -->
+
+            <section class="box">
+                <h1> BIOGRAPHY</h1>
+                <h2> Education:</h2>
+                <ul>
+                    <li>Undergraduate: University of Massachusetts Amherst,</li>
+                    <li>B.S Political Science, Grad. 2007</li>
+                    <li>Law School University of Massachusetts Dartmouth,</li>
+                    <li>JDS Jurisprudence, Grad. 2022</li>
+                    <li>JDS Boston University 2025</li>
+                </ul>
+
+                <h2> Experience:</h2>
+                <ul>
+                    <li>Harding Court & Brace</li>
+                    <li>FDIC</li>
+                    <li> DOR</li>
+
+                </ul>
+            </section>
+
         </div>
-
-
-        <section class="box">
-            <h1> BIOGRAPHY</h1>
-            <h2> Education:</h2>
-            <ul>
-                <li>Undergraduate: University of Massachusetts Amherst,</li>
-                <li>B.S Political Science, Grad. 2007</li>
-                <li>Law School University of Massachusetts Dartmouth,</li>
-                <li>JDS Jurisprudence, Grad. 2022</li>
-                <li>JDS Boston University 2025</li>
-            </ul>
-
-            <h2> Experience:</h2>
-            <ul>
-                <li>Harding Court & Brace</li>
-                <li>FDIC</li>
-                <li> DOR</li>
-
-            </ul>
-        </section>
-
     </div>
 
     <div class="footer">
