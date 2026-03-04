@@ -8,36 +8,42 @@
 }
 
 .wrapper {
-    /*  border: 3px solid red; */
+    /* border: 3px solid red; */
     max-width: 960px;
-    min-width: none;
+    min-width: 480px;
     min-height: 85vh;
-    margin: auto;
+    margin:     auto;
 
-    background-image: url('../Images/lady-justice-justitia.avif');
+    background-image:  url('../Images/lady-justice-justitia.avif');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:   cover;
 }
 
+
+/*************************************/
+/********  Header  *******************/
+/*************************************/
 header {
     /* border: solid 2px blue; */
     background-color: BLACK;
-    color: white;
-    margin: auto;
-    font-size: 1.4em;
-    text-align: center;
+    color:            white;
+    margin:              auto;
+    font-size:          1.4em;
+    text-align:        center;
 }
 
-
+/*************************************/
+/*******  Logo  *******************/
+/*************************************/
 .logo {
-    height: 1.8em;
-    width: 1.8em;
-    background-color: blueviolet;
-    color: white;
-    border-radius: 50%;
-    margin-left: 32px;
-    padding: auto 0;
     float: left;
+    height: 1.8em;
+    width:  1.8em;
+    background-color: blueviolet;
+    color:     white;
+    border-radius: 50%;
+    margin-left:  32px;
+    padding:    auto 0;
     text-align: center;
     border: 2px white solid;
 }
@@ -47,12 +53,19 @@ header {
     outline: 1px dashed red;
 }
 
-/*************************************/
 
+/*************************************/
+/*******  Nav Bar  *******************/
+/*************************************/
 nav {
-    background-color: rgb(233, 126, 38);
     display: block;
-    width: 100%;
+     /* background-color: rgb(233, 126, 38); */
+    background-color: olive;
+    width:         100%;
+    height:       2.4em;
+    /* margin:  .2em   0; */
+    margin-inline: .2em;
+    padding-top:   .2em;
 }
 
 nav ul {
@@ -60,6 +73,8 @@ nav ul {
     justify-content: flex-end;
     column-gap: 12px;
     margin-right: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 nav li {
@@ -72,32 +87,52 @@ nav li:hover {
 }
 
 nav a {
-    font-size: 1.8em;
+    font-size: 1.6em;
     text-decoration: none;
+    color: white;
 }
+
 
 /*********************************/
+/*****  Footer  ******************/
+/*********************************/
 
-.footer h1 {
-    max-width: 960px;
-    min-width: none;
-    margin: auto;
-    min-height: 8vh;
-}
-
-.footer h1 {
-
+.footer{
     background-color: black;
     color: white;
     text-align: center;
+    max-width: 960px;
+    min-width: 480px;
+    margin-inline: auto;
+    /* position: relative; */
+    /* bottom: 0; */
 }
 
+.footer h1 {
+    /* max-width: 960px; */
+    min-width: 480px;
+    /* margin: auto; */
+     padding-top: .6em; 
+    min-height: 8vh;
+}
+
+
 /********************************/
+
+@media(max-width: 580px)
+{
+    .wrapper {  
+        background-position: left -180px  top 0px;
+        .footer h1 { padding-top: .3em;}
+        min-width: 480px;
+    }
+}
+
+
 @media (min-width:680px) {
 
-    header h1,
-    header h2 {
+    header h1 {
         background-color: black;
-        color: yellow;
+        color: rgb(211, 211, 36);
     }
 }
